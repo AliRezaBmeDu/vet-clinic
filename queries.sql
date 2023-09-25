@@ -19,6 +19,9 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 /* Transaction-1 */
 BEGIN;
 UPDATE animals SET species = 'Unspecified';
+SELECT species from animals; 
+ROLLBACK;
+SELECT species from animals;
 ROLLBACK;
 
 /* Transaction-2 */
