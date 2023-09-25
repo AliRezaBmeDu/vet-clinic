@@ -22,7 +22,6 @@ UPDATE animals SET species = 'Unspecified';
 SELECT species from animals; 
 ROLLBACK;
 SELECT species from animals;
-ROLLBACK;
 
 /* Transaction-2 */
 BEGIN;
