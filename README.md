@@ -55,8 +55,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Commands to create a postgresql table**
 - **Commands for inserting items to the table**
 - **Commands for quries to search in the table items**
