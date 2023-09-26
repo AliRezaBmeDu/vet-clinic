@@ -63,3 +63,37 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64,
 
 -- Insert data for Vet Jack Harkness
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
+
+/*  Insert DATA to relationship tables */
+
+-- Retrieve vet IDs based on vet names
+WITH vet_ids AS (
+    SELECT
+        id AS vet_id,
+        name AS vet_name
+    FROM
+        vets
+),
+
+-- Retrieve species IDs based on species names
+species_ids AS (
+    SELECT
+        id AS species_id,
+        name AS species_name
+    FROM
+        species
+)
+
+-- Now, insert data into the "specializations" table
+INSERT INTO specializations (vet_id, species_id)
+SELECT
+    v.vet_id,
+    s.species_id
+FROM
+    vet_ids v
+JOIN
+    species_ids s
+ON
+    (v.vet_name = 'William Tatcher' AND s.species_name = 'Pokemon') OR
+    (v.vet_name = 'Stephanie Mendez' AND s.species_name IN ('Digimon', 'Pokemon')) OR
+    (v.vet_name = 'Jack Harkness' AND s.species_name = 'Digimon');
