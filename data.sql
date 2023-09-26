@@ -49,3 +49,17 @@ WHEN name IN ('Devimon', 'Plantmon') THEN (SELECT id FROM owners WHERE full_name
 WHEN name IN ('Charmander', 'Squirtle', 'Blossom') THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
 WHEN name IN ('Angemon', 'Boarmon') THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
 END;
+
+/*-------------------Insert vets data--------------*/
+
+-- Insert data for Vet William Tatcher
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-04-23');
+
+-- Insert data for Vet Maisy Smith
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '2019-01-17');
+
+-- Insert data for Vet Stephanie Mendez
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-05-04');
+
+-- Insert data for Vet Jack Harkness
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
