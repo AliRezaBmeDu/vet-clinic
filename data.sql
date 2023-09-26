@@ -64,7 +64,8 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64,
 -- Insert data for Vet Jack Harkness
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
 
-/*  Insert DATA to relationship tables */
+
+/*--------------------------------------Insert DATA to relationship tables------------------------------------------*/
 
 -- Retrieve vet IDs based on vet names
 WITH vet_ids AS (
@@ -121,3 +122,4 @@ VALUES
     ((SELECT id FROM vets WHERE name = 'Maisy Smith'), (SELECT id FROM animals WHERE name = 'Boarmon'), '2020-08-03'),
     ((SELECT id FROM vets WHERE name = 'Stephanie Mendez'), (SELECT id FROM animals WHERE name = 'Blossom'), '2020-05-24'),
     ((SELECT id FROM vets WHERE name = 'William Tatcher'), (SELECT id FROM animals WHERE name = 'Blossom'), '2021-01-11');
+    
