@@ -191,12 +191,8 @@ WHERE species_id = v.animal_id
 
 
 -- What specialty should Maisy Smith consider getting? Look for the species she visits the most.
-SELECT
-s.name AS potential_specialty
-FROM (
-SELECT
-a.species_id,
-COUNT(*) AS visit_count
+SELECT s.name AS potential_specialty FROM (
+SELECT a.species_id, COUNT(*) AS visit_count
 FROM visits v
 JOIN animals a ON v.animal_id = a.id
 WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'Maisy Smith')
