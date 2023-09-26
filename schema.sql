@@ -25,3 +25,21 @@ CREATE TABLE species (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );
+
+-- Create table "owners"
+
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name VARCHAR(255),
+    age INTEGER
+);
+
+/* Create table species */
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+-- check if the animals have column id as autoincremented primary key
+/d animals
