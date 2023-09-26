@@ -85,3 +85,30 @@ WHERE s.name = 'Pokemon';
 SELECT o.full_name, a.name
 FROM owners o
 LEFT JOIN animals a ON o.id = a.owner_id;
+
+-- How many animals are there per species?
+SELECT s.name AS species_name, COUNT(a.id) AS animal_count
+FROM species s
+LEFT JOIN animals a ON s.id = a.species_id
+GROUP BY s.name;
+
+-- List all Digimon owned by Jennifer Orwell.
+SELECT a.name
+FROM animals a
+JOIN owners o ON a.owner_id = o.id
+JOIN species s ON a.species_id = s.id
+WHERE o.full_name = 'Jennifer Orwell' AND s.name = 'Digimon';
+
+-- List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT a.name
+FROM animals a
+JOIN owners o ON a.owner_id = o.id
+WHERE o.full_name = 'Dean Winchester' AND a.escape_attempts = 0;
+
+-- Who owns the most animals?
+SELECT o.full_name, COUNT(a.id) AS animal_count
+FROM owners o
+LEFT JOIN animals a ON o.id = a.owner_id
+GROUP BY o.full_name
+ORDER BY animal_count DESC
+LIMIT 1;
