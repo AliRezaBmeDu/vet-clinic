@@ -43,3 +43,14 @@ CREATE TABLE species (
 
 -- check if the animals have column id as autoincremented primary key
 /d animals
+
+-- Drop species
+ALTER TABLE animals DROP COLUMN species;
+
+-- Add the "species_id" column as a foreign key referencing the "species" table:
+ALTER TABLE animals ADD COLUMN species_id INTEGER,
+ADD CONSTRAINT fk_species_id FOREIGN KEY (species_id) REFERENCES species(id);
+
+-- Add the "owner_id" column as a foreign key referencing the "owners" table:
+ALTER TABLE animals ADD COLUMN owner_id INTEGER,
+ADD CONSTRAINT fk_owner_id FOREIGN KEY (owner_id) REFERENCES owners(id);
