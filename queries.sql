@@ -201,3 +201,7 @@ ORDER BY visit_count DESC
 LIMIT 1
 ) AS most_visited_species
 JOIN species s ON most_visited_species.species_id = s.id;
+/* Queries for performance audit */
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
