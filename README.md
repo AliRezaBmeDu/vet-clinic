@@ -105,6 +105,17 @@ To run the project, execute the following steps:
 - Twitter: [@twitterhandle](https://twitter.com/share_insider)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-ali-reza-25686428b/)
 
+👤 **Collins Akorda**
+
+- GitHub: [@githubhandle](https://github.com/firstpj)
+- Twitter: [@twitterhandle](https://twitter.com/AkordaC)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/collins-akorda-bb46b2232/)
+
+👤 **Fatuma Hussein**
+
+- GitHub: [@githubhandle](https://github.com/fatmahussein)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/fatuma-hussein-48149917b)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
