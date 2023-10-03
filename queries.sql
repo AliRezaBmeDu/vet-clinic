@@ -206,8 +206,3 @@ JOIN species s ON most_visited_species.species_id = s.id;
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
 EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
 EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
-
-/* Improve the performance and Explain analyze */
-CREATE INDEX visits_animal_indx ON visits(animal_id);
-CREATE INDEX visits_vet_indx ON visits(vet_id);
-CREATE INDEX email_indx ON owners(email);
